@@ -2,7 +2,7 @@
 {
     outline: 2px red solid;
 }
-*/
+
 
 #inputFile {
     position: relative;
@@ -46,7 +46,7 @@
     font-size: 100%;
     opacity: 0;
 }
-
+*/
 .content-table {
     display: table;
     table-layout: fixed;

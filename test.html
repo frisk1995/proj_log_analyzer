@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+    <style>
+        .container {
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+                <label for="inputFile">File input</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputFile">
+                    <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択(ここにドロップすることもできます)</label>
+                </div>
+            </div>
+
+            <hr />
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+    <script>
+        bsCustomFileInput.init();
+    </script>
+</body>
+
+</html>
