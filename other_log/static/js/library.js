@@ -32,6 +32,22 @@ function createArray(output_text) {
     }
     return result;
 }
+// テーブルヘッダ作成
+function createTheader(result) {
+    const resultHeader = document.getElementById("resultHeader");
+    var headerArray = result.split(",")
+    const tr = document.createElement("tr");
+    console.log(headerArray)
+    resultHeader.appendChild(tr);
+    const tmp = document.createElement("th");
+    tmp.textContent = "#"
+    tr.appendChild(tmp);
+    headerArray.forEach(element => {
+        const th = document.createElement("th");
+        th.textContent = element
+        tr.appendChild(th);
+    });
+}
 
 // データテーブル作成
 function createTable(result) {

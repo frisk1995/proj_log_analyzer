@@ -40,7 +40,10 @@ const selectFile = () => {
     // ファイル読み込み完了時の処理
     reader.onload = () => {
         let output_text = logAnalyzer(reader.result);
+        let output_header = reader.result.slice(0, reader.result.indexOf('\n'))
         //        getFileCSV(output_text)
+        console.log(output_header)
+        createTheader(output_header)
         createTable(createArray(output_text.slice(1)))
         /*
                 for (const line of output_text) {
@@ -58,7 +61,6 @@ const selectFile = () => {
 
 // ログ解析関数
 function logAnalyzer(strline) {
-
     // ログ出力用配列
     let output_line = [];
     var d = new Date();
