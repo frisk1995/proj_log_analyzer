@@ -32,16 +32,14 @@ function createArray(output_text) {
     }
     return result;
 }
-
 // テーブルヘッダ作成
 function createTheader(result) {
     const resultHeader = document.getElementById("resultHeader");
-    var headerArray = result.split(",")
+    var headerArray = result.split(" ")
     const tr = document.createElement("tr");
     resultHeader.appendChild(tr);
     const tmp = document.createElement("th");
     tmp.textContent = "#"
-    tmp.className = ".th-line-number"
     tr.appendChild(tmp);
     headerArray.forEach(element => {
         const th = document.createElement("th");

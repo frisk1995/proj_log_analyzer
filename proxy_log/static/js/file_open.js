@@ -27,11 +27,13 @@ function checkbox_cell(obj, id) {
 */
 
 const selectFile = () => {
-    // FileListオブジェクト取得
+    // table initialize
     document.querySelector('table').innerHTML = "";
     document.querySelector('thead').innerHTML = "";
     document.querySelector('tbody').innerHTML = "";
+    // FileListオブジェクト取得
     const selectFiles = document.querySelector("#select-file").files
+
     // Fileオブジェクト取得
     const file = selectFiles[0]
 
@@ -76,17 +78,19 @@ function logAnalyzer(strline) {
     var line_counter = 0;
     for (let i = 0; i < messages.length; i++) {
         element = messages[i];
-        const log_data = element.split(/,/)
+        const log_data = element.split(/ /)
         var data_msg = ""
-        for (let j = 0; j < log_data.length; j++) {
-            if (j != 0) {
+        for (let j = 2; j < log_data.length; j++) {
+            if (j != 2) {
                 data_msg += "," + log_data[j];
             } else {
                 data_msg += log_data[j];
-
             }
         }
-        output_line.push(line_counter + "," + data_msg)
+
+        var log_date = log_data[0] + log_data[1]
+
+        output_line.push(line_counter + "," + log_date + "," + data_msg)
         line_counter++;
     }
     /*

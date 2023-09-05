@@ -3,8 +3,6 @@ document.querySelector('input').addEventListener('change', (evt) => {
     console.log(evt.target.files[0]);
   });
 */
-// テーブル列を非表示にする
-/*
 window.onload = function () {
     var array = ["res", "type", "url"];
     for (var j = 0; j < array.length; j++) {
@@ -24,14 +22,14 @@ function checkbox_cell(obj, id) {
         TABLE.rows[i].cells[CELL.cellIndex].style.display = (obj.checked) ? '' : 'none';
     }
 }
-*/
 
 const selectFile = () => {
-    // FileListオブジェクト取得
-    document.querySelector('table').innerHTML = "";
-    document.querySelector('thead').innerHTML = "";
+    // table initialize
     document.querySelector('tbody').innerHTML = "";
+
+    // FileListオブジェクト取得
     const selectFiles = document.querySelector("#select-file").files
+
     // Fileオブジェクト取得
     const file = selectFiles[0]
 
@@ -42,9 +40,7 @@ const selectFile = () => {
     // ファイル読み込み完了時の処理
     reader.onload = () => {
         let output_text = logAnalyzer(reader.result);
-        let output_header = reader.result.slice(0, reader.result.indexOf('\n'))
         //        getFileCSV(output_text)
-        createTheader(output_header)
         createTable(createArray(output_text.slice(1)))
         /*
                 for (const line of output_text) {
@@ -67,32 +63,49 @@ function logAnalyzer(strline) {
     let output_line = [];
     var d = new Date();
 
+    output_line.push("No,datetime,Type,response,fromAddress,fromPort,toAddress,toPort,toDomain,toUrl")
+
+    // ログファイルを改行単位で分割
     const messages = strline.split(/\n/);
-    messages.shift();
-
-    var element = ""
-
-    // 1行見てダブルクォーテーションがあれば次のダブルクォーテーションまで探す
-    var line_counter = 0;
-    for (let i = 0; i < messages.length; i++) {
-        element = messages[i];
-        const log_data = element.split(/,/)
-        var data_msg = ""
-        for (let j = 0; j < log_data.length; j++) {
-            if (j != 0) {
-                data_msg += "," + log_data[j];
-            } else {
-                data_msg += log_data[j];
-
-            }
+    var line_counter = 1;
+    for (const str1 of messages) {
+        const log_date = str1.split(/ +/)
+        const log_msg = str1.split(/Proxy /);
+        // get YYYY/MM/dd hh:mm:ss
+        // rsyslogだと日付がずれるから修正する必要あり
+        var year = ""
+        var month = ""
+        var day = ""
+        var time = ""
+        if (log_date[2].indexOf(":") != -1) {
+            year = "2023"
+            month = changeMonth(log_date[0])
+            day = log_date[1]
+            time = log_date[2]
+        } else {
+            year = log_date[2]
+            month = changeMonth(log_date[0])
+            day = log_date[1]
+            time = log_date[3]
         }
-        output_line.push(line_counter + "," + data_msg)
+
+        var type = getType(log_msg[1])
+        var response = getResponse(log_msg[1])
+        var fromAddress = getFromAddress(log_msg[1])
+        var toUrl = getToUrl(log_msg[1])
+        var toDomain = getToDomain(log_msg[1])
+        var toAddress = getToAddress(log_msg[1])
+        var fromPort = fromAddress.split(/:/)[1]
+        var toPort = toAddress.split(/:/)[1]
+
+        if (typeof fromPort === 'undefined') { fromPort = "" }
+        if (typeof toPort === 'undefined') { toPort = "" }
+        // methodごとに処理を分ける
+        // 出力
+        const d = new Date(year, month, day)
+        output_line.push(line_counter + "," + d.toLocaleDateString({ year: "numeric", month: "2-digit" }) + " " + time + "," + type + "," + response + "," + fromAddress.split(/:/)[0] + "," + fromPort + "," + toAddress.split(/:/)[0] + "," + toPort + "," + toDomain + "," + toUrl);
         line_counter++;
     }
-    /*
-        for (const str1 of messages) {
-        }
-        */
     return output_line;
 }
 

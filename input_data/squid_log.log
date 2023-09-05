@@ -1,0 +1,45 @@
+x user date data response packet x ClientApp tcp-res
+10.8.0.115 - - [31/Aug/2023:18:24:38 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 177935 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:38 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 45804 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:38 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 56545 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:38 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 13313 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:38 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.0" 200 5214 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:38 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.0" 200 5214 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:39 +0900] "CONNECT login.live.com:443 HTTP/1.1" 200 16626 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:39 +0900] "CONNECT login.live.com:443 HTTP/1.1" 200 16626 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:39 +0900] "CONNECT login.live.com:443 HTTP/1.1" 200 16626 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:40 +0900] "CONNECT login.live.com:443 HTTP/1.1" 200 16626 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:41 +0900] "CONNECT da.xboxservices.com:443 HTTP/1.0" 200 5827 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:24:44 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 8569 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:24:44 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 30695 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:44 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.0" 200 22981 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:44 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.0" 200 13147 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:44 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.0" 200 15639 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:44 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.0" 200 6593 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:44 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 7852 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:24:45 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.1" 200 39953 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:25:31 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 407 4101 "-" "-" TCP_DENIED:HIER_NONE
+10.8.0.115 - - [31/Aug/2023:18:25:31 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 407 4101 "-" "-" TCP_DENIED:HIER_NONE
+10.8.0.115 - kojima [31/Aug/2023:18:25:40 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 111882 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:25:40 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 60779 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:25:40 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 33216 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:25:40 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 107125 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:25:41 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 155900 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:25:41 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 72634 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:25:41 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 47241 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:25:41 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 205636 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:25:41 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.0" 200 7156 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:25:41 +0900] "CONNECT musicart.xboxlive.com:443 HTTP/1.0" 200 41205 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:26:57 +0900] "CONNECT da.xboxservices.com:443 HTTP/1.0" 200 5640 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:33:04 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 9799 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:33:04 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 9265 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:33:04 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 8887 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:33:04 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 8858 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:33:04 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 12772 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:33:04 +0900] "CONNECT store-images.s-microsoft.com:443 HTTP/1.0" 200 8245 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:34:01 +0900] "CONNECT musicart.xboxlive.com:443 HTTP/1.0" 200 77410 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:34:01 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 322027 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:34:01 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 91949 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:34:01 +0900] "CONNECT images-eds-ssl.xboxlive.com:443 HTTP/1.0" 200 15675 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19045" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - kojima [31/Aug/2023:18:34:02 +0900] "CONNECT musicart.xboxlive.com:443 HTTP/1.0" 200 132308 "-" "-" TCP_TUNNEL:HIER_DIRECT
+10.8.0.115 - - [31/Aug/2023:18:34:05 +0900] "CONNECT storeedgefd.dsx.mp.microsoft.com:443 HTTP/1.1" 200 39981 "-" "-" TCP_TUNNEL:HIER_DIRECT

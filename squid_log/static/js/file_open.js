@@ -1,37 +1,12 @@
-/*
-document.querySelector('input').addEventListener('change', (evt) => {
-    console.log(evt.target.files[0]);
-  });
-*/
-// テーブル列を非表示にする
-/*
-window.onload = function () {
-    var array = ["res", "type", "url"];
-    for (var j = 0; j < array.length; j++) {
-        var id = array[j] + "_display";
-        var obj = array[j] + "_check";
-        var CELL = document.getElementById(id);
-        var TABLE = CELL.parentNode.parentNode.parentNode;
-        for (var i = 0; TABLE.rows[i]; i++) {
-            TABLE.rows[i].cells[CELL.cellIndex].style.display = (document.getElementById(obj).checked) ? '' : 'none';
-        }
-    }
-}
-function checkbox_cell(obj, id) {
-    var CELL = document.getElementById(id);
-    var TABLE = CELL.parentNode.parentNode.parentNode;
-    for (var i = 0; TABLE.rows[i]; i++) {
-        TABLE.rows[i].cells[CELL.cellIndex].style.display = (obj.checked) ? '' : 'none';
-    }
-}
-*/
 
 const selectFile = () => {
-    // FileListオブジェクト取得
+    // table initialize
     document.querySelector('table').innerHTML = "";
     document.querySelector('thead').innerHTML = "";
     document.querySelector('tbody').innerHTML = "";
+    // FileListオブジェクト取得
     const selectFiles = document.querySelector("#select-file").files
+
     // Fileオブジェクト取得
     const file = selectFiles[0]
 
@@ -76,17 +51,25 @@ function logAnalyzer(strline) {
     var line_counter = 0;
     for (let i = 0; i < messages.length; i++) {
         element = messages[i];
-        const log_data = element.split(/,/)
+        const log_data = element.split(/ /)
         var data_msg = ""
         for (let j = 0; j < log_data.length; j++) {
+            if (log_data[j].indexOf("\"") != -1) {
+                do {
+                    data_msg += log_data[j + 1] + ' '
+                    console.log(data_msg)
+                    j++;
+                } while (log_data[j].indexOf("\"") == -1)
+            }
             if (j != 0) {
                 data_msg += "," + log_data[j];
             } else {
                 data_msg += log_data[j];
-
             }
         }
-        output_line.push(line_counter + "," + data_msg)
+        var log_date = log_data[3] + log_data[4]
+
+        output_line.push(line_counter + "," + log_date + "," + data_msg)
         line_counter++;
     }
     /*
