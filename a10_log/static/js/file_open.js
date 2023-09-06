@@ -25,7 +25,6 @@ function checkbox_cell(obj, id) {
 
 const selectFile = () => {
     // table initialize
-    document.querySelector('tbody').innerHTML = "";
 
     // FileListオブジェクト取得
     const selectFiles = document.querySelector("#select-file").files
@@ -63,7 +62,7 @@ function logAnalyzer(strline) {
     let output_line = [];
     var d = new Date();
 
-    output_line.push("No,datetime,Type,response,fromAddress,fromPort,toAddress,toPort,toDomain,toUrl")
+    output_line.push("#,datetime,Type,response,fromAddress,fromPort,toAddress,toPort,toDomain,toUrl")
 
     // ログファイルを改行単位で分割
     const messages = strline.split(/\n/);

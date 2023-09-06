@@ -105,21 +105,21 @@ const output = () => {
     const row = []
 
     for (let r = 0; r < table.rows.length; r++) {
-      row.length = 0
-      for (let c = 0; c < table.rows[r].cells.length; c++) {
-        const field = table.rows[r].cells[c].textContent
-        row.push(escaped.test(field) ? '"' + field.replace(e, '""') + '"' : field)
-      }
-      csv.push(row.join(','))
+        row.length = 0
+        for (let c = 0; c < table.rows[r].cells.length; c++) {
+            const field = table.rows[r].cells[c].textContent
+            row.push(escaped.test(field) ? '"' + field.replace(e, '""') + '"' : field)
+        }
+        csv.push(row.join(','))
     }
     const blob = new Blob([bom, csv.join('\n')], {
-      'type': 'text/csv'
+        'type': 'text/csv'
     })
     const a = document.getElementById('output_btn')
     a.download = 'output.csv'
     a.href = window.URL.createObjectURL(blob)
 
-  }
+}
 
 function createArray(output_text) {
     let result = [];
